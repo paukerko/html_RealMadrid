@@ -1,0 +1,124 @@
+body {
+  font-family: "Gill Sans", sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.top-bar {
+  padding-bottom: 5px; /* Padding for the content inside the top bar */
+  text-align: center; /* Center align the content */
+  height: 60px; /* Adjusted height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nadpis {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+  color: #c1a05a;
+  text-shadow: 0px 1px 1px #333;
+  width: fit-content;
+}
+
+p {
+  font-size: 20px; /* Adjusted font size */
+  line-height: 10px; /* Centering vertically */
+  margin: 0;
+  color: #525252;
+}
+
+.section {
+  padding: 10px 0px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 1fr;
+  gap: 30px;
+  justify-content: center;
+}
+
+.grid-item {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0);
+  filter: grayscale(100%);
+  transition: transform 0.5s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.15);
+  filter: none;
+}
+
+.grid-item-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c1a05a;
+  font-size: 23px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.5s ease;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 1px #333;
+}
+
+.grid-item:hover .grid-item-text {
+  opacity: 1;
+  bottom: -20%;
+  text-shadow: 0px 1px 1px #333;
+}
+
+.footer {
+  bottom: 0;
+  justify-content: center;
+  background-color: none;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  height: 2.5rem;
+  width: 100%;
+  flex: 1;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 14px;
+}
